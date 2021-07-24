@@ -66,7 +66,7 @@
 %%%%%%%
 % Bold contents of a link
 \let\oldhref\href
-\renewcommand{\href}[3][black]{\oldhref{#2}{\color{#1}{#3}}}
+\renewcommand{\href}[3][blue]{\oldhref{#2}{\color{#1}{#3}}}
 % Your name goes here:
 \author{Urivsky Kiril}
 % Update date set to last compile:
@@ -138,10 +138,9 @@
 % No indentation
 \setlength{\parindent}{0in}
 \begin{document}
-\input kiril-resume-hebrew
-
+\include{kiril-resume-hebrew}
 \pagebreak
 
-\input kiril-resume-english
-
+\include{kiril-resume-english}
+\unsetLTR
 \end{document}
