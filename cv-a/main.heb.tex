@@ -1,4 +1,8 @@
 % xelatex
+%%%%% attributes:
+% edition = full-heb
+% version good 1
+%%%%%
 \documentclass[letterpaper,
 %twocolumn,
 10pt]{article}
@@ -8,7 +12,18 @@
 \usepackage[dvipsnames]{xcolor}
 % \usepackage{xltxtra}
 \usepackage{xunicode}
-\usepackage[colorlinks=true,urlcolor=Blue]{hyperref}
+\usepackage[
+	unicode=true,
+	pdfborder=false,
+	pdftoolbar=false,
+	pdfmenubar=false,
+	pdftitle={0525470608-Kiril Urivsky-אוריבסקי קיריל-résumé},
+	pdfauthor={Kiril Urivsky},
+	pdfsubject={résumé/קורות חיים},
+	pdfcreator={Kiril Urivsky},
+	pdfproducer={Kiril Urivsky},
+	pdfkeywords={Kiril Urivsky,אוריבסקי קיריל,resume,cv,קורות חיים},
+	hidelinks]{hyperref}
 \usepackage{titlesec}
 \usepackage[margin=1in]{geometry}
 \usepackage{bidi}
@@ -49,9 +64,6 @@
 }%
 \fi
 %%%%%%%
-% Bold contents of a link
-\let\oldhref\href
-\renewcommand{\href}[3][blue]{\oldhref{#2}{\color{#1}{#3}}}
 % Your name goes here:
 \author{Urivsky Kiril}
 % Update date set to last compile:
@@ -110,8 +122,8 @@
 \newcommand{\location}{\includegraphics[height=.85em]{ico/address.png}}
 % Custom section spacing and formatting
 \titleformat{\part}{\Huge\scshape\filcenter}{}{1em}{}
-\titleformat{\section}{\Large\bf\raggedright}{}{1em}{}[{\titlerule[2pt]}]
-\titlespacing{\section}{0pt}{3pt}{7pt}
+ \titleformat{\section}{\Large\bf}{}{1em}{}[{\titlerule[1pt]}]
+ \titlespacing{\section}{0pt}{3pt}{7pt}
 \titleformat{\subsection}{\large\bfseries\centering}{}{0em}{\underline}%[\rule{3cm}{.2pt}]
 \titlespacing{\subsection}{0pt}{7pt}{7pt}
 % No indentation
@@ -124,7 +136,7 @@
 	\begin{minipage}[t]{.5\textwidth}
 		\par{\centering{\Huge  אוריבסקי קיריל}\par}
 	\end{minipage}
-	\section{פרטים אישיים}
+	\section{כללי}
 	\unsetRTL
 	\setLTR
 	\begin{minipage}[t]{.5\linewidth}
@@ -162,44 +174,61 @@ Graduate student in Educational Psychology characterized by strong autodidactic 
 	{}
 	
 	\entry{2015--2018}
-	{\href{https://www.dropbox.com/s/pcm0mybvgi85ma0/BA-Psych.pdf?dl=0{תואר ראשון בפסיכולוגיה ובלימודים רב תחומיים במדעי הרוח והחברה. סיום התואר \textbf{בהצטיינות יתרה}}, ממוצע ציונים: 95.00.}
-	{בעל תעודת הצטיינות (2017) ותעודת הצטיינות רקטור (2018) שניתנה בשל הישגיי הלימודיים.}
-	{לימודיי הרב תחומיים במדעי הרוח והחברה כללו את החטיבות לפילוסופיה ולניהול ויישוב סכסוכים ומו"מ}
+	{\href{https://www.dropbox.com/s/pcm0mybvgi85ma0/BA-Psych.pdf}{תואר ראשון בפסיכולוגיה ובלימודים רב תחומיים במדעי הרוח והחברה. סיום התואר \textbf{בהצטיינות יתרה}}, ממוצע ציונים: 95.00.}
+{בעל תעודת הצטיינות (2017) ותעודת הצטיינות רקטור (2018) שניתנה בשל הישגיי הלימודיים.}
+{לימודיי הרב תחומיים במדעי הרוח והחברה כללו את החטיבות לפילוסופיה ולניהול ויישוב סכסוכים ומו"מ}
 
 	\subsection{הכשרות נוספות}
 	
-	\entry{2009--2010}
-	{\href{https://www.dropbox.com/s/csphxdynjdg3ze2/computer-technitian-certificate.jpg?dl=0}{סיום קורס \textbf{טכנאי מחשבים}, IQline, האקדמיה למדע ואומנות}}
-	{ביצוע הליכי אבחון, תיקון וטיפול ברכיבי תוכנה וחומרה עבור שמירה על עבודתם התקינה של מערכות מחשוב}
+\entry{2009--2010}
+{\href{https://www.dropbox.com/s/csphxdynjdg3ze2/computer-technitian-certificate.jpg?dl=0}{סיום קורס 
+\textbf{טכנאי מחשבים, IQline, האקדמיה למדע ואומנות}}}
+{ביצוע הליכי אבחון, תיקון וטיפול ברכיבי תוכנה וחומרה עבור שמירה על עבודתם התקינה של מערכות מחשוב}
 	{}
 	
-	\section{Workplace Experience and Military Service}
+	\section{ניסיון תעסוקתי ושירות צבאי}
+
+
+%ניסיון תעסוקתי
+%2018 – היום: מדריך שיקומי בהוסטל לנפגעי נפש "בית כנרת", אשדוד.
+%• בתפקידי אני עוסק במתן עזרה למשתקמים להשתלב בחברה באופן נורמטיבי ועצמאי, ולהביאם לתפקוד יומיומי שיאפשר את איכות החיים האופטימלית עבורם.
+%2015: מאבטח מתקנים במשרדי בנק לאומי בלוד וראשון לציון, רשף בטחון.
+%2013 – 2014: מאבטח מתקנים במרכז לוגיסטיקה Flying Cargo באזור תעשייה כנות, רשף בטחון.
+%• בדיקה ושמירה על מקומות מסווגים של החברה ומניעת פעילות פלילית, יחד עם
+%• הנחיית מאבטחים חדשים ומתן מענה מהיר לבעיות בשטח
+
 
 \entry{2018--2019}
-{nsrhl aheunh}
-{Oversaw a variety of professional assignments to assist and provide services such as casework, treatment, outreach development, and referrals to psychiatric patients by arranging, scheduling, authorizing, and monitoring accommodation services.}
+{\textbf{מדריך שיקומי בהוסטל לנפגעי נפש "בית כנרת", קידום פרוייקטים שיקומיים}}
+{ליווי והדרכה של משתקמים בניהול אורח חיים עצמאי ושילוב בקהילה על ידי בנייתה ויישומה של תוכנית שיקום פרטנית בעזרתו של צוות רב מקצועי. פרט לעבודה השגרתית עם כלל דיירי הקהילה, ביצעתי ליווי פרטני מורחב עבור חמישה משתקמים שכלל 2-4 פגישות שבועיות}
 {}
 
-\entry{2013--2015} 
-{\textbf{Security Guard} at Reshef Security Ltd.,} 
-{2015 - Bank Leumi's office buildings in Lod and Rishon LeZion. \\
-2013 - Flying Cargo Group logistics' centers at Kannot Industrial Zone}
-{\href{https://www.dropbox.com/s/kr5rcui1zgp35i0/recommendation-letter-security-guard.jpg?dl=0}{See recommendation letter.}}
-
+\entry{2013--2015}
+{\href{https://www.dropbox.com/s/kr5rcui1zgp35i0/recommendation-letter-security-guard.jpg?dl=0}{\textbf{מאבטח מתקנים, רשף בטחון}}} 
+{2015 - משרדי בנק לאומי בראשון לציון ובלוד. 
+\\		
+2013 - מרכזי לוגיסטיקה של חברת Cargo Flying באזור תעשייה כנות.}
+{}
 \entry{2013--2014} 
-{\textbf{NCO of Casualty Assistance} at the Israeli Defense Force in the Combat Engineering Corps} 
-{positioned at GOC Army Headquarters as a liaison for medical, social, and memorial services provided for wounded or fallen soldiers, and their grieving families.}
+{\textbf{מש"ק נפגעים בחיל ההנדסה הקרבית, מפקדת זרוע היבשה}}
+{\textbf{סיוע בטיפול בצורכיהם של חיילים מאושפזים וליווי חיילים הנמצאים בחופשת מחלה בביתם. כמו כן, מתן תמיכה עבור משפחות שכולות.}} 
 {}
 
-	\section{Languages}
+	\section{שפות}
 
-\entry{Human}
-{\textbf{English, Hebrew, Russian}}
-{Highly proficient in all three, capable of using either one interchangeably and befittingly to situational context and with great concern towards keeping discourse pleasant and culturally sensitive.}
+\entry{טבעיות}
+{\textbf{אנגלית, עברית ורוסית}}
+{בעל משלב לשוני גבוה וניסיון רב בשימוש בכל אחת משלושת אלו הן ברמה היומיומית והן ברמה אקדמאית ומקצועית. מחזיק ביכולת לתקשר רעיונות או מסרים בצורה ברורה ומובנת בהתאם לקהל היעד.}
+{בעל הבנה פרגמטית מעמיקה אודות אופן השימוש הראוי בשפות אלו הכולל הבנה תרבותית ומעמדית באשר לכל אחת.} 
 {}
 
-\entry{Machine}
-{Computer}
+\entry{מחשב}
+{ }
+{
+{- באש (bash) ושפות מעטפת \תפעול תואמות POSIX דומות המיוחסות לפרוייקט GNU ומערכות הפעלה מבוססות יוניקס
+- שפות סימון ותיבנות כמו HTML, XML, markdown, ו-\textit{LaTex/XeTeX.}}
+- ידע שטחי בשפות תכנות Java, Javascript ו-C.}
+}
 {- bash and other GNU Project related and POSIX compliant shell CLIs \\
 - A myriad of markup languages including \textit{LaTeX/XeTeX}, Markdown, XML, and HTML. \\
 - some superficial knowledge of C, Java and JavaScript.} \\
@@ -208,9 +237,9 @@ Graduate student in Educational Psychology characterized by strong autodidactic 
 	\section{התנדבות ועשייה למען הקהילה}
 	
 	\entry{2017--2018}
-	{התלמדות טיפולית במרכז בריאות הנפש, מרפאת הדקל, אילת}
-	{מתן הכוונה, ליווי, תמיכה רגשית, וסיוע בפיתוח מסוגלות עצמית בקרב ילדים ובני נוער המשויכים למרפאה}
-	{}
+{התלמדות טיפולית במרכז בריאות הנפש, מרפאת הדקל, אילת}
+{מתן הכוונה, ליווי, תמיכה רגשית, וסיוע בפיתוח מסוגלות עצמית בקרב ילדים ובני נוער המשויכים למרפאה}
+{}
 	
 	\entry{2015--2018}
 	{חונך אישי עבור ילדים ונערים בסיכון במסגרת פרוייקט פר"ח}
