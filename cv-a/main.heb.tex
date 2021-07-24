@@ -2,39 +2,54 @@
 %%%%% attributes:
 % edition = full-heb
 % version good 1
+% last update on 2021/07/24
 %%%%%
-\documentclass[letterpaper,
-%twocolumn,
+\documentclass[a4paper,
 10pt]{article}
-% - HEBREW IS BULLYING ME ON XELATEX - %
-%polyglossia packages - polyglossia must be first
-\usepackage{polyglossia}
+\author{Urivsky Kiril}
+\date{\today}
+\usepackage{polyglossia} %polyglossia packages - polyglossia must be first
 \usepackage[dvipsnames]{xcolor}
-% \usepackage{xltxtra}
 \usepackage{xunicode}
-\usepackage[
+\usepackage[ %%%%% start METADATA AND PDF/A COMPLIANCE %%%%%
 	unicode=true,
 	pdfborder=false,
 	pdftoolbar=false,
 	pdfmenubar=false,
-	pdftitle={0525470608-Kiril Urivsky-אוריבסקי קיריל-résumé},
-	pdfauthor={Kiril Urivsky},
-	pdfsubject={résumé/קורות חיים},
-	pdfcreator={Kiril Urivsky},
-	pdfproducer={Kiril Urivsky},
-	pdfkeywords={Kiril Urivsky,אוריבסקי קיריל,resume,cv,קורות חיים},
+	pdfauthor=Kiril Urivsky,
+	pdfsubject=Resume of Kiril Urivsky,
+	pdfcreator=Kiril Urivsky,
+	pdfproducer=Kiril Urivsky,
+	pdfkeywords=Kiril Urivsky,resume,cv,
 	hidelinks]{hyperref}
+%\hypersetup{
+%	pdfauthor=Urivsky Kiril,
+%	pdftitle={Urivsky Kiril - Resume},
+%	pdfsubject=Urivsky Kiril,resume,
+%	pdfkeywords=cv,resume,kiril,urivsky,
+%	pdfproducer=Urivsky Kiril,
+%	pdfcreator=Urivsky Kiril,
+%	pdfpagemode=FullScreen,
+%	% pdfstartview= }
+%}
+% \usepackage[a-2b,mathxmp]{pdfx}[2021/07/24]
+% \usepackage[T1]{fontenc}
+%\begin{filecontents*}[overwrite]{\jobname.xmpdata}
+%\Title{Kiril Urivsky Resume}
+%\Author{Kiril Urivsky}
+%\Language{en-US}
+%%\Language{he-IL}
+%\Subject{\input cv.abstract.tex}
+%\Keywords{Kiril\sep Urivsky\sep Resume\sep}
+%\end{filecontents*}
+%%%%% end METADATA AND PDF/A COMPLIANCE %%%%%
 \usepackage{titlesec}
 \usepackage[margin=1in]{geometry}
-\usepackage{bidi}
-%XeTeX packages
-%\usepackage{fontspec}
-%\usepackage[T1]{fontenc}
-%settings for packages
+\usepackage{bidi} %% Languages
 \setdefaultlanguage{english}
 \setotherlanguage{hebrew}
 % \setmainfont{Linux Libertine O}		
-% - / HEBREW IS BULLYING ME ON XELATEX - %	
+\usepackage{colorprofiles}
 \usepackage[utf8]{inputenc}
 \usepackage{metalogo}
 \usepackage{xifthen}
@@ -42,57 +57,44 @@
 \usepackage{titling}
 % \newfontfamily\cfont{Noto Sans CJK SC}
 \usepackage{libertine}
-% hebrew
-% \usepackage{polyglossia}
-% \defaultfontfeatures{Mapping=tex-text, Scale=MatchLowercase}
-% \setdefaultlanguage{english}
-% \setotherlanguage{hebrew}
-% \usepackage[english,hebrew]{babel}
-% \usepackage{culmus}
 % Macro to allow image links in XeLaTeX
 \ifxetex
 \usepackage{letltxmacro}
 \setlength{\XeTeXLinkMargin}{1pt}
 \LetLtxMacro\SavedIncludeGraphics\includegraphics
 \def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
-	\IncludeGraphicsAux{#1}%
+\IncludeGraphicsAux{#1}%
 }%
 \newcommand*{\IncludeGraphicsAux}[2]{%
-	\XeTeXLinkBox{%
-		\SavedIncludeGraphics#1{#2}%
-	}%
+\XeTeXLinkBox{%
+\SavedIncludeGraphics#1{#2}%
+}%
 }%
 \fi
-%%%%%%%
-% Your name goes here:
-\author{Urivsky Kiril}
-% Update date set to last compile:
-\date{\today}
 % Custom title command.
 \renewcommand{\maketitle}{
-	\hspace{.25\textwidth}
-	\begin{minipage}[t]{.5\textwidth}
-		\par{\centering{\Huge  \bfseries{\theauthor}}\par}
-	\end{minipage}
-	% \begin{minipage}[t]{.25\textwidth}
-	%{\footnotesize\hfill{}\color{gray}
-	%\hfill{}Download this document:
-	%
-	% \hfill{}\href[gray]{https://www.fakelink.co.kr/cv.pdf}{https://www.fakelink.co.kr/cv.pdf}
-	%
-	% \hfill{}(Last updated \thedate.)
-	%}
-	%	\end{minipage}
+\hspace{.25\textwidth}
+\begin{minipage}[t]{.5\textwidth}
+\par{\centering{\Huge  \bfseries{\theauthor}}\par}
+\end{minipage}
+%%%%%%% - add download link for your resume
+% \begin{minipage}[t]{.25\textwidth}
+% {\footnotesize\hfill{}\color{gray}
+% \hfill{}Download this document:
+% \hfill{}\href[gray]{https://www.fakelink.co.kr/cv.pdf}{https://www.fakelink.co.kr/cv.pdf}
+% \hfill{}(Last updated \thedate.)
+% }
+% \end{minipage}
+%%%%%%%
 }
 % Setting the font I want:
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{sqrcaps}
 % Making the \entry command
 \newcommand{\entry}[4]{
-	\ifthenelse{\isempty{#3}}
-	{\slimentry{#1}{#2}}{
-		
-		\begin{minipage}[t]{.15\linewidth}
+\ifthenelse{\isempty{#3}}
+{\slimentry{#1}{#2}}{		
+\begin{minipage}[t]{.15\linewidth}
 			\hfill \textsc{#1}
 		\end{minipage}
 		\hfill\vline\hfill
@@ -128,8 +130,7 @@
 \titlespacing{\subsection}{0pt}{7pt}{7pt}
 % No indentation
 \setlength{\parindent}{0in}
-\begin{document}
-	%%%%%%%%%%%%%%%%%%%%%%%%% - Hebrew Version - %%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} %%%%%%%%%%%%%% document start
 	\setRTL
 	\hspace{.25\textwidth}
 	%%% - TITLE (NAME) IN HEBREW - %%%
@@ -155,90 +156,80 @@
 	\unsetLTR
 	\unsetRTL
 	\setRTL
-	
 	\begin{minipage}[t]{1\linewidth}
 %\begin{tabular}{rl}
-\vspace{0.25cm}
+\vspace{0.25cm} %%%%%%%%%5 - Brief self description
 Graduate student in Educational Psychology characterized by strong autodidactic capabilities and a curiosity for a wide array of scholastic and empirical  endeavors. By learning to make use of these traits I acquired a continuously developing set of diverse and extensive skills thanks to which I am able to find, process, and communicate new ideas efficiently without sacrificing simplicity nor comprehensibility.  
 %\end{tabular}
 \end{minipage}
 	
-	\section{השכלה}
+\section{השכלה}
 	
-	\entry{2019}
-{\textbf{תואר מוסמך (מ.א.) בפסיכולוגיה חינוכית (מתקיים); המכללה האקדמית עמק יזרעאל ע"ש מקס שטרן, עמק יזרעאל}}
-{כחלק מהכשרתי לקחתי חלק בהתנסות מעשית (פרקטיקום) אשר במהלכה השתתפתי בישיבות ייעוץ עם סגל ההוראה וחברי צוות ההנהלה של בית ספר תיכון וגן חינוך מיוחד בעפולה, וכמו כן ביצעתי ההערכות פסיכודיאגנוסטיות ופסיכודידקטיות עבור תלמידים שהופנו אל השירות הפסיכולוגי, וקיימתי פגישות הדרכת עם הוריהם של חלקם.
+\entry{2019}
+	{\textbf{תואר מוסמך (מ.א.) בפסיכולוגיה חינוכית (מתקיים); המכללה האקדמית עמק יזרעאל ע"ש מקס שטרן, עמק יזרעאל}}
+	{כחלק מהכשרתי לקחתי חלק בהתנסות מעשית (פרקטיקום) אשר במהלכה השתתפתי בישיבות ייעוץ עם סגל ההוראה וחברי צוות ההנהלה של בית ספר תיכון וגן חינוך מיוחד בעפולה, וכמו כן ביצעתי ההערכות פסיכודיאגנוסטיות ופסיכודידקטיות עבור תלמידים שהופנו אל השירות הפסיכולוגי, וקיימתי פגישות הדרכת עם הוריהם של חלקם.
 במקביל לכך, אני עורך מחקר על פיו נכתבת עבודת תזה הנכתבת תחת ליוויו והדרכתו של 
-		\href{https://www.researchgate.net/scientific-contributions/Orrie-Dan-2172412162}{ד"ר דן אורי} אודות 
+\href{https://www.researchgate.net/scientific-contributions/Orrie-Dan-2172412162}{ד"ר דן אורי} אודות 
 \href{https://tinyurl.com/ADHD-Coping-Seminar}{השפעותיהן של הפרעות קשב והיפראקטיביות ולקויות למידה לאורך חייהם ועל פני מספר תחומי תפקוד התפתחותי.}}
 	{}
 	
-	\entry{2015--2018}
+\entry{2015--2018}
 	{\href{https://www.dropbox.com/s/pcm0mybvgi85ma0/BA-Psych.pdf}{תואר ראשון בפסיכולוגיה ובלימודים רב תחומיים במדעי הרוח והחברה. סיום התואר \textbf{בהצטיינות יתרה}}, ממוצע ציונים: 95.00.}
-{בעל תעודת הצטיינות (2017) ותעודת הצטיינות רקטור (2018) שניתנה בשל הישגיי הלימודיים.}
-{לימודיי הרב תחומיים במדעי הרוח והחברה כללו את החטיבות לפילוסופיה ולניהול ויישוב סכסוכים ומו"מ}
+	{בעל תעודת הצטיינות (2017) ותעודת הצטיינות רקטור (2018) שניתנה בשל הישגיי הלימודיים.}
+	{לימודיי הרב תחומיים במדעי הרוח והחברה כללו את החטיבות לפילוסופיה ולניהול ויישוב סכסוכים ומו"מ}
 
-	\subsection{הכשרות נוספות}
+\subsection{הכשרות נוספות}
 	
 \entry{2009--2010}
-{\href{https://www.dropbox.com/s/csphxdynjdg3ze2/computer-technitian-certificate.jpg?dl=0}{סיום קורס 
+	{\href{https://www.dropbox.com/s/csphxdynjdg3ze2/computer-technitian-certificate.jpg?dl=0}{סיום קורס 
 \textbf{טכנאי מחשבים, IQline, האקדמיה למדע ואומנות}}}
-{ביצוע הליכי אבחון, תיקון וטיפול ברכיבי תוכנה וחומרה עבור שמירה על עבודתם התקינה של מערכות מחשוב}
+	{ביצוע הליכי אבחון, תיקון וטיפול ברכיבי תוכנה וחומרה עבור שמירה על עבודתם התקינה של מערכות מחשוב}
 	{}
-	
-	\section{ניסיון תעסוקתי ושירות צבאי}
 
-
-%ניסיון תעסוקתי
-%2018 – היום: מדריך שיקומי בהוסטל לנפגעי נפש "בית כנרת", אשדוד.
-%• בתפקידי אני עוסק במתן עזרה למשתקמים להשתלב בחברה באופן נורמטיבי ועצמאי, ולהביאם לתפקוד יומיומי שיאפשר את איכות החיים האופטימלית עבורם.
-%2015: מאבטח מתקנים במשרדי בנק לאומי בלוד וראשון לציון, רשף בטחון.
-%2013 – 2014: מאבטח מתקנים במרכז לוגיסטיקה Flying Cargo באזור תעשייה כנות, רשף בטחון.
-%• בדיקה ושמירה על מקומות מסווגים של החברה ומניעת פעילות פלילית, יחד עם
-%• הנחיית מאבטחים חדשים ומתן מענה מהיר לבעיות בשטח
-
+\section{ניסיון תעסוקתי ושירות צבאי}
 
 \entry{2018--2019}
-{\textbf{מדריך שיקומי בהוסטל לנפגעי נפש "בית כנרת", קידום פרוייקטים שיקומיים}}
-{ליווי והדרכה של משתקמים בניהול אורח חיים עצמאי ושילוב בקהילה על ידי בנייתה ויישומה של תוכנית שיקום פרטנית בעזרתו של צוות רב מקצועי. פרט לעבודה השגרתית עם כלל דיירי הקהילה, ביצעתי ליווי פרטני מורחב עבור חמישה משתקמים שכלל 2-4 פגישות שבועיות}
-{}
+	{\textbf{מדריך שיקומי בהוסטל לנפגעי נפש "בית כנרת", קידום פרוייקטים שיקומיים}}
+	{ליווי והדרכה של משתקמים בניהול אורח חיים עצמאי ושילוב בקהילה על ידי בנייתה ויישומה של תוכנית שיקום פרטנית בעזרתו של צוות רב מקצועי. פרט לעבודה השגרתית עם כלל דיירי הקהילה, ביצעתי ליווי פרטני מורחב עבור חמישה משתקמים שכלל 2-4 פגישות שבועיות}
+	{}
 
 \entry{2013--2015}
-{\href{https://www.dropbox.com/s/kr5rcui1zgp35i0/recommendation-letter-security-guard.jpg?dl=0}{\textbf{מאבטח מתקנים, רשף בטחון}}} 
-{2015 - משרדי בנק לאומי בראשון לציון ובלוד. 
+	{\href{https://www.dropbox.com/s/kr5rcui1zgp35i0/recommendation-letter-security-guard.jpg?dl=0}{\textbf{מאבטח מתקנים, רשף בטחון}}} 
+	{2015 - משרדי בנק לאומי בראשון לציון ובלוד. 
 \\		
 2013 - מרכזי לוגיסטיקה של חברת Cargo Flying באזור תעשייה כנות.}
-{}
+	{}
+	
 \entry{2013--2014} 
-{\textbf{מש"ק נפגעים בחיל ההנדסה הקרבית, מפקדת זרוע היבשה}}
-{\textbf{סיוע בטיפול בצורכיהם של חיילים מאושפזים וליווי חיילים הנמצאים בחופשת מחלה בביתם. כמו כן, מתן תמיכה עבור משפחות שכולות.}} 
-{}
+	{\textbf{מש"ק נפגעים בחיל ההנדסה הקרבית, מפקדת זרוע היבשה}}
+	{\textbf{סיוע בטיפול בצורכיהם של חיילים מאושפזים וליווי חיילים הנמצאים בחופשת מחלה בביתם. כמו כן, מתן תמיכה עבור משפחות שכולות.}} 
+	{}
 
 \section{שפות}
 
 \entry{טבעיות}
-{\textbf{אנגלית, עברית ורוסית}}
-{בעל משלב לשוני גבוה וניסיון רב בשימוש בכל אחת משלושת אלו הן ברמה היומיומית והן ברמה אקדמאית ומקצועית. מחזיק ביכולת לתקשר רעיונות או מסרים בצורה ברורה ומובנת בהתאם לקהל היעד. \\
+	{\textbf{אנגלית, עברית ורוסית}}
+	{בעל משלב לשוני גבוה וניסיון רב בשימוש בכל אחת משלושת אלו הן ברמה היומיומית והן ברמה אקדמאית ומקצועית. מחזיק ביכולת לתקשר רעיונות או מסרים בצורה ברורה ומובנת בהתאם לקהל היעד. \\
 בעל הבנה פרגמטית מעמיקה אודות אופן השימוש הראוי בשפות אלו הכולל הבנה תרבותית ומעמדית באשר לכל אחת.} 
-{}
+	{}
 
 \entry{מחשב}
-{\textbf{שפות מחשבים}}
-{- באש (bash) ושפות מעטפת ותפעול (shell) תואמות POSIX דומות המיוחסות לפרוייקט GNU ומערכות הפעלה מבוססות יוניקס \\ 
-- שפות סימון ותבנות כמו HTML, XML, markdown, ו-
+	{\textbf{שפות מחשבים}}
+	{- באש (bash) ושפות מעטפת ותפעול (shell) תואמות POSIX דומות המיוחסות לפרוייקט GNU ומערכות הפעלה מבוססות יוניקס \\ 
+- שפות סימון ותבנות כמו HTML, XML, Markdown, ו-
 \textit{LaTex}/\textit{XeTeX} \\
 - ידע שטחי בשפות תכנות Java, Javascript ו-C.}
-{}
+	{}
 	
 \section{התנדבות ועשייה למען הקהילה}
 	
-	\entry{2017--2018}
-{\textbf{התלמדות טיפולית במרכז בריאות הנפש}, מרפאת הדקל, אילת}
-{מתן הכוונה, ליווי, תמיכה רגשית, וסיוע בפיתוח מסוגלות עצמית בקרב ילדים ובני נוער המשויכים למרפאה}
-{}
+\entry{2017--2018}
+	{\textbf{התלמדות טיפולית במרכז בריאות הנפש}, מרפאת הדקל, אילת}
+	{מתן הכוונה, ליווי, תמיכה רגשית, וסיוע בפיתוח מסוגלות עצמית בקרב ילדים ובני נוער המשויכים למרפאה}
+	{}
 	
-	\entry{2015--2018}
-{\textbf{חונך אישי עבור ילדים ונערים בסיכון במסגרת פרויקט פר"ח}}
+\entry{2015--2018}
+	{\textbf{חונך אישי עבור ילדים ונערים בסיכון במסגרת פרויקט פר"ח}}
 {השתתפות רצופה לאורך שלוש שנים}
 	{}		
 	\unsetRTL
