@@ -1,0 +1,179 @@
+% xelatex
+\documentclass[letterpaper,
+%twocolumn,
+10pt]{article}
+% - HEBREW IS BULLYING ME ON XELATEX - %
+%polyglossia packages - polyglossia must be first
+\usepackage{polyglossia}
+\usepackage[dvipsnames]{xcolor}
+% \usepackage{xltxtra}
+\usepackage{xunicode}
+\usepackage[colorlinks=true,urlcolor=Blue]{hyperref}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+\usepackage{bidi}
+%XeTeX packages
+%\usepackage{fontspec}
+%\usepackage[T1]{fontenc}
+%settings for packages
+\setdefaultlanguage{english}
+\setotherlanguage{hebrew}
+% \setmainfont{Linux Libertine O}		
+% - / HEBREW IS BULLYING ME ON XELATEX - %	
+\usepackage[utf8]{inputenc}
+\usepackage{metalogo}
+\usepackage{xifthen}
+\usepackage{graphicx}
+\usepackage{titling}
+% \newfontfamily\cfont{Noto Sans CJK SC}
+\usepackage{libertine}
+% hebrew
+% \usepackage{polyglossia}
+% \defaultfontfeatures{Mapping=tex-text, Scale=MatchLowercase}
+% \setdefaultlanguage{english}
+% \setotherlanguage{hebrew}
+% \usepackage[english,hebrew]{babel}
+% \usepackage{culmus}
+% Macro to allow image links in XeLaTeX
+\ifxetex
+\usepackage{letltxmacro}
+\setlength{\XeTeXLinkMargin}{1pt}
+\LetLtxMacro\SavedIncludeGraphics\includegraphics
+\def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
+	\IncludeGraphicsAux{#1}%
+}%
+\newcommand*{\IncludeGraphicsAux}[2]{%
+	\XeTeXLinkBox{%
+		\SavedIncludeGraphics#1{#2}%
+	}%
+}%
+\fi
+%%%%%%%
+% Bold contents of a link
+\let\oldhref\href
+\renewcommand{\href}[3][blue]{\oldhref{#2}{\color{#1}{#3}}}
+% Your name goes here:
+\author{Urivsky Kiril}
+% Update date set to last compile:
+\date{\today}
+% Custom title command.
+\renewcommand{\maketitle}{
+	\hspace{.25\textwidth}
+	\begin{minipage}[t]{.5\textwidth}
+		\par{\centering{\Huge  \bfseries{\theauthor}}\par}
+	\end{minipage}
+	% \begin{minipage}[t]{.25\textwidth}
+	%{\footnotesize\hfill{}\color{gray}
+	%\hfill{}Download this document:
+	%
+	% \hfill{}\href[gray]{https://www.fakelink.co.kr/cv.pdf}{https://www.fakelink.co.kr/cv.pdf}
+	%
+	% \hfill{}(Last updated \thedate.)
+	%}
+	%	\end{minipage}
+}
+% Setting the font I want:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{sqrcaps}
+% Making the \entry command
+\newcommand{\entry}[4]{
+	\ifthenelse{\isempty{#3}}
+	{\slimentry{#1}{#2}}{
+		
+		\begin{minipage}[t]{.15\linewidth}
+			\hfill \textsc{#1}
+		\end{minipage}
+		\hfill\vline\hfill
+		\begin{minipage}[t]{.80\linewidth}
+			{\bf#2}\\\textit{#3} \footnotesize{#4}
+		\end{minipage}\\
+		\vspace{.2cm}
+}}
+\newcommand{\slimentry}[2]{
+	\begin{minipage}[t]{.15\linewidth}
+		\hfill \textsc{#1}
+	\end{minipage}
+	\hfill\vline\hfill
+	\begin{minipage}[t]{.80\linewidth}
+		#2
+	\end{minipage}\\
+	\vspace{.25cm}
+}% end \entry command definition
+\let\lineheight\baselineskip
+% Link images
+\newcommand{\pdf}{\includegraphics[height=.85em]{ico/pdf.png}}
+\newcommand{\linkedin}{\includegraphics[height=.85em]{ico/li.png}} 
+\newcommand{\gh}{\includegraphics[height=.85em]{ico/gh.png}}
+\newcommand{\www}{\includegraphics[height=.85em]{ico/www.png}}
+\newcommand{\email}{\includegraphics[height=.85em]{ico/email.png}}
+\newcommand{\phone}{\includegraphics[height=.85em]{ico/phone.png}}
+\newcommand{\location}{\includegraphics[height=.85em]{ico/address.png}}
+% Custom section spacing and formatting
+\titleformat{\part}{\Huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}{\Large\bf\raggedright}{}{1em}{}[{\titlerule[2pt]}]
+\titlespacing{\section}{0pt}{3pt}{7pt}
+\titleformat{\subsection}{\large\bfseries\centering}{}{0em}{\underline}%[\rule{3cm}{.2pt}]
+\titlespacing{\subsection}{0pt}{7pt}{7pt}
+% No indentation
+\setlength{\parindent}{0in}
+\begin{document}
+	%%%%%%%%%%%%%%%%%%%%%%%%% - Hebrew Version - %%%%%%%%%%%%%%%%%%%%%%%%%
+	\setRTL
+	\hspace{.25\textwidth}
+	%%% - TITLE (NAME) IN HEBREW - %%%
+	\begin{minipage}[t]{.5\textwidth}
+		\par{\centering{\Huge  אוריבסקי קיריל}\par}
+	\end{minipage}
+	\section{מידע}
+	\unsetRTL
+	\setLTR
+	\begin{minipage}[t]{.5\linewidth}
+		\begin{tabular}{rp{.75\linewidth}}
+			\baselineskip=20pt
+			\email{} : &\href{mailto:kirilurivsky@gmail.com}{kirilurivsky@gmail.com}\\
+			\phone{} : &\href{tel:972525470608}{(+972) 52 547 0608}
+		\end{tabular}
+	\end{minipage}
+	\begin{minipage}[t]{.5\linewidth}
+		\begin{tabular}{rl}
+			\linkedin{} : &\href{https://www.linkedin.com/in/kiril-u}{https://linkedin.com/in/kiril-u}\\
+			\location{} : &\href{https://goo.gl/maps/MSacjpSy7vZSKykP7}{דרום מחוז אשדוד,}
+		\end{tabular}
+	\end{minipage}	
+	\unsetLTR
+	\unsetRTL
+	\setRTL
+	\section{השכלה}
+	
+	\entry{2019}
+	{\textbf{תואר מוסמך (מ.א.) בפסיכולוגיה חינוכית (מתקיים); המכללה האקדמית עמק יזרעאל ע"ש מקס שטרן, עמק יזרעאל}}
+	{כחלק מהכשרתי לקחתי חלק בהתנסות מעשית (פרקטיקום) אשר במהלכה השתתפתי בישיבות ייעוץ עם סגל ההוראה וחברי צוות ההנהלה של בית ספר תיכון וגן חינוך מיוחד בעפולה, וכמו כן ביצעתי ההערכות פסיכודיאגנוסטיות ופסיכודידקטיות עבור תלמידים שהופנו אל השירות הפסיכולוגי, וקיימתי פגישות הדרכת עם הוריהם של חלקם.
+		במקביל לכך, אני עורך מחקר על פיו נכתבת עבודת תזה הנכתבת תחת ליוויו והדרכתו של 
+		\href{https://tinyurl.com/ADHD-Coping-Seminar}{ד"ר דן אורי}
+		אודות השפעותיהן של הפרעות קשב והיפראקטיביות ולקויות למידה לאורך חייהם ועל פני מספר תחומי תפקוד התפתחותי.}
+	{}
+	
+	\entry{2015--2018}
+	{תואר ראשון בפסיכולוגיה ובלימודים רב תחומיים במדעי הרוח והחברה. סיום התואר \textbf{בהצטיינות יתרה}, ממוצע ציונים: 95.00.}
+	{בעל תעודת הצטיינות (2017) ותעודת הצטיינות רקטור (2018) עבור הישגיי הלימודיים.}
+	{לימודיי הרב תחומיים במדעי הרוח והחברה כללו את החטיבות לפילוסופיה ולניהול ויישוב סכסוכים ומו"מ}   
+	
+	\subsection{הכשרות נוספות}
+	
+	\entry{2009--2010}
+	{סיום קורס \textbf{טכנאי מחשבים}, IQline, האקדמיה למדע ואומנות}
+	{ביצוע הליכי אבחון, תיקון וטיפול ברכיבי תוכנה וחומרה עבור שמירה על עבודתם התקינה של מערכות מחשוב}
+	{}
+	
+	\section{התנדבות ועשייה למען הקהילה}
+	
+	\entry{2017--2018}
+	{התלמדות טיפולית במרכז בריאות הנפש, מרפאת הדקל, אילת}
+	{מתן הכוונה, ליווי, תמיכה רגשית, וסיוע בפיתוח מסוגלות עצמית בקרב ילדים ובני נוער המשויכים למרפאה}
+	{}
+	
+	\entry{2015--2018}
+	{חונך אישי עבור ילדים ונערים בסיכון במסגרת פרוייקט פר"ח}
+	{השתתפות רצופה לאורך שלוש שנים}
+	{}		
+	\unsetRTL
