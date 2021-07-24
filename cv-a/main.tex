@@ -35,7 +35,6 @@
 \setdefaultlanguage{english}
 \setotherlanguage{hebrew}
 % \setmainfont{Linux Libertine O}		
-% - / HEBREW IS BULLYING ME ON XELATEX - %	
 \usepackage[utf8]{inputenc}
 \usepackage{metalogo}
 \usepackage{xifthen}
@@ -90,6 +89,12 @@
 }
 % Setting the font I want:
 \renewcommand{\familydefault}{\sfdefault}
+% \defaultfontfeatures{Mapping=tex-text}
+\setmainfont{FreeSans}
+\setsansfont{FreeSans}
+% \setmonofont{FreeMono}
+% \newfontfamily\hebrewfont[Script=Hebrew]{David CLM}
+% \newfontfamily\englishfont{Times New Roman}
 \usepackage{sqrcaps}
 % Making the \entry command
 \newcommand{\entry}[4]{
@@ -126,7 +131,7 @@
 \newcommand{\location}{\includegraphics[height=.85em]{ico/address.png}}
 % Custom section spacing and formatting
 \titleformat{\part}{\Huge\scshape\filcenter}{}{1em}{}
-\titleformat{\section}{\Large\bf\raggedright}{}{1em}{}[{\titlerule[2pt]}]
+\titleformat{\section}{\Large\bf}{}{1em}{}[{\titlerule[2pt]}]
 \titlespacing{\section}{0pt}{3pt}{7pt}
 \titleformat{\subsection}{\large\bfseries\centering}{}{0em}{\underline}%[\rule{3cm}{.2pt}]
 \titlespacing{\subsection}{0pt}{7pt}{7pt}
