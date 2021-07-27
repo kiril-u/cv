@@ -1,49 +1,36 @@
 % xelatex
 \documentclass[letterpaper,
-% twocolumn,
 10pt]{article}
-%polyglossia packages - polyglossia must be first
 \usepackage{polyglossia}
 \usepackage[dvipsnames]{xcolor}
-% \usepackage{xltxtra}
 \usepackage{xunicode}
 \usepackage[
-unicode=true,
-pdfborder=false,
-pdftoolbar=false,
-pdfmenubar=false,
-pdftitle={0525470608-Kiril-Urivsky-אוריבסקי-קיריל-resume},
-pdfauthor={Kiril Urivsky},
-pdfsubject={resume/קורות חיים},
-pdfcreator={Kiril Urivsky},
-pdfproducer={Kiril Urivsky},
-pdfkeywords={Kiril Urivsky,אוריבסקי קיריל,resume,cv,קורות חיים},
-hidelinks
-]{hyperref}
-\usepackage{titlesec}
-\usepackage[margin=0.75in]{geometry}
-%XeTeX packages
-%\usepackage{fontspec}
-%\usepackage[T1]{fontenc}
-%settings for packages
-\usepackage{bidi}
-\setdefaultlanguage{english}
-\setotherlanguage{hebrew}
-\usepackage[utf8]{inputenc}
-\usepackage{metalogo}
+        unicode=true,
+        pdfborder=false,
+        pdftoolbar=false,
+        pdfmenubar=false,
+        pdftitle={0525470608-Kiril-Urivsky-אוריבסקי-קיריל-resume},
+        pdfauthor={Kiril Urivsky},
+        pdfsubject={resume/קורות חיים},
+        pdfcreator={Kiril Urivsky},
+        pdfproducer={Kiril Urivsky},
+        pdfkeywords={Kiril Urivsky,אוריבסקי קיריל,resume,cv,קורות חיים},
+        % pdfpagemode=FullScreen
+        hidelinks
+        ]{hyperref}
+        \usepackage{titlesec}
+        \usepackage[margin=0.75in]{geometry}
+        %% Language Settings %%
+        % remember that bidi must be placed after hyperref, titlesec, geometry, etc...        
+        \usepackage{bidi} % best avoid using this package alltogether, but i made it work
+        \setdefaultlanguage{english}
+        \setotherlanguage{hebrew}
+        \usepackage[utf8]{inputenc}
+        \usepackage{metalogo} % might be unnecessary
 \usepackage{xifthen}
 \usepackage{graphicx}
 \usepackage{titling}
-% \newfontfamily\cfont{Noto Sans CJK SC}
-% \usepackage{libertine}
-% hebrew
-% \usepackage{polyglossia}
-% \defaultfontfeatures{Mapping=tex-text, Scale=MatchLowercase}
-% \setdefaultlanguage{english}
-% \setotherlanguage{hebrew}
-% \usepackage[english,hebrew]{babel}
-% \usepackage{culmus}
-% Macro to allow image links in XeLaTeX
+%%%%% Macro to allow image links in XeLaTeX
 \ifxetex
   \usepackage{letltxmacro}
   \setlength{\XeTeXLinkMargin}{1pt}
@@ -56,40 +43,23 @@ hidelinks
       \SavedIncludeGraphics#1{#2}%
     }%
   }%
-\fi
-%%%%%%%
+\fi %%%%%%
 % Bold contents of a link
 \let\oldhref\href
 \renewcommand{\href}[3][black]{\oldhref{#2}{\color{#1}{#3}}}
-% Your name goes here:
 \author{Urivsky Kiril}
-% Update date set to last compile:
 \date{\today}
-% Custom title command.
+%%% start Custom title command.
 \renewcommand{\maketitle}{
 	\hspace{.25\textwidth}
 	\begin{minipage}[t]{.5\textwidth}
 \par{\centering{\Huge  \bfseries{\theauthor}}\par}
-	\end{minipage}
-%\begin{minipage}[t]{.25\textwidth}
-%{\footnotesize\hfill{}\color{gray}
-%\hfill{}Download this document:
-%\hfill{}\href[gray]{https://www.fakelink.co.kr/cv.pdf}{https://www.fakelink.co.kr/cv.pdf}
-%%
-%\hfill{}(Last updated \thedate.)
-%}
-%\end{minipage}
-}
+	\end{minipage}}
+%%% end Custom title command.
 % Setting the font I want:
-% \renewcommand{\familydefault}{\sfdefault}
-% \defaultfontfeatures{Mapping=tex-text}
 \setmainfont{Liberation Sans}
-% \setsansfont{FreeSans}
-% \setmonofont{FreeMono}
-% \newfontfamily\hebrewfont[Script=Hebrew]{Liberation Sans}
-% \newfontfamily\englishfont{FreeSans}
 \usepackage{sqrcaps}
-% Making the \entry command
+%%%%% Making the \entry command
 \newcommand{\entry}[4]{
 \ifthenelse{\isempty{#3}}
 {\slimentry{#1}{#2}}{
@@ -111,7 +81,7 @@ hidelinks
 #2
 \end{minipage}\\
 \vspace{.15cm}
-}% end \entry command definition
+}%%%%% end \entry command definition
 \let\lineheight\baselineskip
 % Link images
 \newcommand{\pdf}{\includegraphics[height=.85em]{ico/pdf.png}}
@@ -129,10 +99,9 @@ hidelinks
 \titlespacing{\subsection}{0pt}{7pt}{7pt}
 % No indentation
 \setlength{\parindent}{0in}
-\begin{document}
-\include{kiril-resume-hebrew}
-% \pagebreak
-
+\begin{document} %%%%%%%%% <body> %%%%%%%%%
 \include{kiril-resume-english}
+% \pagebreak
+\include{kiril-resume-hebrew}
 \unsetLTR
-\end{document}
+\end{document} %%%%%%%%% </body> %%%%%%%%%

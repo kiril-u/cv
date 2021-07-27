@@ -18,3 +18,7 @@ cv-b/
 cv-a/
 
 *.md~
+
+archive/
+
+.gitignore~

@@ -22,4 +22,4 @@ it might look outdated but i rather have a boomer-looking resume instead of a so
 - [ ] check for language mistakes (grammar or otherwise related)
 - [ ] write an **IT version**
 - [X] prepare a one page **general version**
-~~- [ ] add about current interests? CCNA/Python/Linux~~
+- ~~[ ] add about current interests? CCNA/Python/Linux~~
