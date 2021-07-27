@@ -1,6 +1,6 @@
 % xelatex
 \documentclass[letterpaper,
-twocolumn,
+% twocolumn,
 10pt]{article}
 %polyglossia packages - polyglossia must be first
 \usepackage{polyglossia}
@@ -14,7 +14,7 @@ twocolumn,
         pdfmenubar=false,
         pdftitle={0525470608-Kiril-Urivsky-אוריבסקי-קיריל-resume},
         pdfauthor={Kiril Urivsky},
-        pdfsubject={résumé/קורות חיים},
+        pdfsubject={resume/קורות חיים},
         pdfcreator={Kiril Urivsky},
         pdfproducer={Kiril Urivsky},
         pdfkeywords={Kiril Urivsky,אוריבסקי קיריל,resume,cv,קורות חיים},
@@ -72,19 +72,18 @@ twocolumn,
 	\begin{minipage}[t]{.5\textwidth}
 \par{\centering{\Huge  \bfseries{\theauthor}}\par}
 	\end{minipage}
-% \begin{minipage}[t]{.25\textwidth}
-%{\footnotesize\hfill{}\color{gray}
-%\hfill{}Download this document:
+\begin{minipage}[t]{.25\textwidth}
+{\footnotesize\hfill{}\color{gray}
+\hfill{}Download this document:
+\hfill{}\href[gray]{https://www.fakelink.co.kr/cv.pdf}{https://www.fakelink.co.kr/cv.pdf}
 %
-% \hfill{}\href[gray]{https://www.fakelink.co.kr/cv.pdf}{https://www.fakelink.co.kr/cv.pdf}
-%
-% \hfill{}(Last updated \thedate.)
-%}
-%	\end{minipage}
+\hfill{}(Last updated \thedate.)
+}
+\end{minipage}
 }
 % Setting the font I want:
 \renewcommand{\familydefault}{\sfdefault}
-% \defaultfontfeatures{Mapping=tex-text}
+\defaultfontfeatures{Mapping=tex-text}
 \setmainfont{FreeSans}
 \setsansfont{FreeSans}
 % \setmonofont{FreeMono}
@@ -95,7 +94,6 @@ twocolumn,
 \newcommand{\entry}[4]{
 \ifthenelse{\isempty{#3}}
 {\slimentry{#1}{#2}}{
-
 \begin{minipage}[t]{.15\linewidth}
 \hfill \textsc{#1}
 \end{minipage}
