@@ -4,6 +4,7 @@
 10pt]{article}
 %polyglossia packages - polyglossia must be first
 \usepackage{polyglossia}
+\usepackage{bidi}
 % Try to use a preferred font otherwise fall back to the one fontconfig finds.
 % Make sure we are in batch mode so compilation continues when preferred font
 % isn't found.
@@ -49,7 +50,6 @@ echo -n '\newfontfamily\hebrewfont{' > hebfont.tex
         ]{hyperref}
 \usepackage{titlesec}
 \usepackage[margin=0.75in]{geometry}
-\usepackage{bidi}
 %XeTeX packages
 %\usepackage{fontspec}
 %\usepackage[T1]{fontenc}
