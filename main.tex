@@ -4,6 +4,33 @@
 10pt]{article}
 %polyglossia packages - polyglossia must be first
 \usepackage{polyglossia}
+% Try to use a preferred font otherwise fall back to the one fontconfig finds.
+% Make sure we are in batch mode so compilation continues when preferred font
+% isn't found.
+\count255=\interactionmode
+\batchmode
+\font\testfont="David CLM" at 10pt
+\interactionmode=\count255
+\ifx\testfont\nullfont
+% use the bashful to run bash script
+% grab the first family fontconfig finds supporting hebrew
+% create hebfont.tex looking like:
+% \newfontfamily\hebrewfont{Some Font}[Script=Hebrew]
+% Note: Don't indent this, since bashful is picky about leading spaces
+\usepackage{bashful}
+\bash
+echo -n '\newfontfamily\hebrewfont{' > hebfont.tex
+	fc-list :lang=he family | head -1 | tr -d '\n' >> hebfont.tex
+	echo -n '}[Script=Hebrew]' >> hebfont.tex
+\END
+\input{hebfont.tex}
+\else
+\newfontfamily\hebrewfont{David CLM}[Script=Hebrew]
+\fi
+\setmainlanguage{english}
+\setotherlanguage{hebrew}
+
+%%%% - end Language and font
 \usepackage[dvipsnames]{xcolor}
 % \usepackage{xltxtra}
 \usepackage{xunicode}
@@ -27,8 +54,8 @@
 %\usepackage{fontspec}
 %\usepackage[T1]{fontenc}
 %settings for packages
-\setdefaultlanguage{english}
-\setotherlanguage{hebrew}
+%% \setdefaultlanguage{english}
+%% \setotherlanguage{hebrew}
 % \setmainfont{Linux Libertine O}
 \usepackage[utf8]{inputenc}
 \usepackage{metalogo}
