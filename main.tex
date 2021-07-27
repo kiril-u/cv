@@ -22,34 +22,7 @@ hidelinks
 ]{hyperref}
 \usepackage{titlesec}
 \usepackage[margin=0.75in]{geometry}
-% Try to use a preferred font otherwise fall back to the one fontconfig finds.
-% Make sure we are in batch mode so compilation continues when preferred font
-% isn't found.
-\count255=\interactionmode
-\batchmode
-\font\testfont="FreeSans" at 11pt
-\interactionmode=\count255
-\ifx\testfont\nullfont
-% use the bashful to run bash script
-% grab the first family fontconfig finds supporting hebrew
-% create hebfont.tex looking like:
-% \newfontfamily\hebrewfont{Some Font}[Script=Hebrew]
-% Note: Don't indent this, since bashful is picky about leading spaces
-\usepackage{bashful}
-\bash
-echo -n '\newfontfamily\hebrewfont{' > hebfont.tex
-	fc-list :lang=he family | head -1 | tr -d '\n' >> hebfont.tex
-	echo -n '}[Script=Hebrew]' >> hebfont.tex
-\END
-\input{hebfont.tex}
-\else
-\newfontfamily\hebrewfont{Ezra SIL}[Script=Hebrew]
-\fi
 \setmainlanguage{english}
-\setotherlanguage{hebrew}
-
-%%%% - end Language and font
-
 %XeTeX packages
 %\usepackage{fontspec}
 %\usepackage[T1]{fontenc}
