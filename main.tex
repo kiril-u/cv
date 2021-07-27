@@ -4,7 +4,24 @@
 10pt]{article}
 %polyglossia packages - polyglossia must be first
 \usepackage{polyglossia}
-\usepackage{bidi}
+\usepackage[dvipsnames]{xcolor}
+% \usepackage{xltxtra}
+\usepackage{xunicode}
+\usepackage[
+unicode=true,
+pdfborder=false,
+pdftoolbar=false,
+pdfmenubar=false,
+pdftitle={0525470608-Kiril-Urivsky-אוריבסקי-קיריל-resume},
+pdfauthor={Kiril Urivsky},
+pdfsubject={resume/קורות חיים},
+pdfcreator={Kiril Urivsky},
+pdfproducer={Kiril Urivsky},
+pdfkeywords={Kiril Urivsky,אוריבסקי קיריל,resume,cv,קורות חיים},
+hidelinks
+]{hyperref}
+\usepackage{titlesec}
+\usepackage[margin=0.75in]{geometry}
 % Try to use a preferred font otherwise fall back to the one fontconfig finds.
 % Make sure we are in batch mode so compilation continues when preferred font
 % isn't found.
@@ -32,24 +49,7 @@ echo -n '\newfontfamily\hebrewfont{' > hebfont.tex
 \setotherlanguage{hebrew}
 
 %%%% - end Language and font
-\usepackage[dvipsnames]{xcolor}
-% \usepackage{xltxtra}
-\usepackage{xunicode}
-\usepackage[
-        unicode=true,
-        pdfborder=false,
-        pdftoolbar=false,
-        pdfmenubar=false,
-        pdftitle={0525470608-Kiril-Urivsky-אוריבסקי-קיריל-resume},
-        pdfauthor={Kiril Urivsky},
-        pdfsubject={resume/קורות חיים},
-        pdfcreator={Kiril Urivsky},
-        pdfproducer={Kiril Urivsky},
-        pdfkeywords={Kiril Urivsky,אוריבסקי קיריל,resume,cv,קורות חיים},
-        hidelinks
-        ]{hyperref}
-\usepackage{titlesec}
-\usepackage[margin=0.75in]{geometry}
+
 %XeTeX packages
 %\usepackage{fontspec}
 %\usepackage[T1]{fontenc}
