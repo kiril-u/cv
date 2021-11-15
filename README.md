@@ -24,6 +24,7 @@ My actual resume, written in XeLaTeX, both in English and in Hebrew.
 **begin document**
 - Adding english version
 - Adding hebrew version
+- 
 **end**
 
 ### kiril-resume-*language*.tex
