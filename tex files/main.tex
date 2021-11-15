@@ -5,6 +5,7 @@
 \usepackage{polyglossia}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{xunicode}
+% METADATA
 \usepackage[
         unicode=true,
         pdfborder=false,
@@ -16,22 +17,24 @@
         pdfcreator={Kiril Urivsky},
         pdfproducer={Kiril Urivsky},
         pdfkeywords={Kiril Urivsky,אוריבסקי קיריל,resume,cv,קורות חיים},
-        % pdfpagemode=FullScreen
         hidelinks
         ]{hyperref}
-        \usepackage{titlesec}
-        \usepackage[margin=0.75in]{geometry}
-        %% Language Settings %%
-        % remember that bidi must be placed after hyperref, titlesec, geometry, etc...        
-        \usepackage{bidi} % best avoid using this package alltogether, but i made it work
-        \setdefaultlanguage{english}
-        \setotherlanguage{hebrew}
-        \usepackage[utf8]{inputenc}
-        \usepackage{metalogo} % might be unnecessary
+\author{Urivsky Kiril} % <- NAME
+\date{\today} % <- puts current date
+\usepackage{titlesec}
+\usepackage[margin=0.75in]{geometry}
+% LANGUAGE SETTINGS 
+% note: remember that bidi must be placed after hyperref, titlesec, and geometry    
+\usepackage{bidi}
+\setdefaultlanguage{english}
+\setotherlanguage{hebrew}
+\usepackage[utf8]{inputenc}
+\usepackage{metalogo}
 \usepackage{xifthen}
 \usepackage{graphicx}
 \usepackage{titling}
-%%%%% Macro to allow image links in XeLaTeX
+%
+% Macro to allow image links in XeLaTeX
 \ifxetex
   \usepackage{letltxmacro}
   \setlength{\XeTeXLinkMargin}{1pt}
@@ -45,12 +48,12 @@
     }%
   }%
 \fi %%%%%%
+%
 % Bold contents of a link
 \let\oldhref\href
 \renewcommand{\href}[3][black]{\oldhref{#2}{\color{#1}{#3}}}
-\author{Urivsky Kiril}
-\date{\today}
-%%% start Custom title command.
+%
+% start Custom title command.
 \renewcommand{\maketitle}{
 	\hspace{.25\textwidth}
 	\begin{minipage}[t]{.5\textwidth}
@@ -104,9 +107,9 @@
 \titlespacing{\subsection}{0pt}{7pt}{7pt}
 % No indentation
 \setlength{\parindent}{0in}
-\begin{document} %%%%%%%%% <body> %%%%%%%%%
+\begin{document} % Actual document starts here
 \include{kiril-resume-english}
+% \pagebreak % <- incase your different language versions take more than one page. i recommend to keep your resume at one page (for each language).
 \include{kiril-resume-hebrew}
-% \pagebreak
-\unsetLTR
-\end{document} %%%%%%%%% </body> %%%%%%%%%
+% \unsetLTR
+\end{document} % hope this helps you
