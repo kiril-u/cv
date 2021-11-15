@@ -55,4 +55,4 @@ A folder for the various graphics used throughout the document
 This folder contains three appendices to the resume that don't have to be part of this repo anymore since i link to the files directly on a hosted server. These files are kept here just as a backup.
 
 
-Big thanks to https://github.com/lukesmithxyz for teaching me the basics and making me want to continue learning how to use LaTeX on my own. My resume contains big chunks of Luke's one, but a lot of work was added into my versiob that doesn't appear on Luke's resume/cv.
+Big thanks to https://github.com/lukesmithxyz for teaching me the basics and making me want to continue learning how to use LaTeX on my own.
