@@ -1,5 +1,6 @@
 # XeLaTeX Resume 2021
-[(kiril-resume-2021-1)](https://github.com/kiril-u/kiril-resume-2021-1)
+
+[(kiril-resume-2021)](https://github.com/kiril-u/kiril-resume-2021)
 
 My actual resume, written in XeLaTeX, both in English and in Hebrew.
 
