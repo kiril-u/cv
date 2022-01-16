@@ -38,3 +38,7 @@ main.synctex.gz
 main.pdf
 
 removed-unused-text.txt
+
+*.gz
+
+mom/
