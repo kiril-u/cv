@@ -5,7 +5,7 @@ My actual resume, written in XeLaTeX, both in English and in Hebrew.
 
 **See folder export-latest for the PDFs**
 
-# main.tex
+## main.tex
 
 ### Structure
 
