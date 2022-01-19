@@ -10,7 +10,7 @@ My actual resume and a template written in XeLaTeX. Template files may be used f
 
 - Metadata (hyperref)
 - Language settings (bidi, inputenc)
-- A macro to allow image links in XeLaTeX
+- A macro to allow image links
 - Custom title
 - Font settings
 - Link images
