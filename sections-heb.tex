@@ -1,0 +1,77 @@
+\setRTL
+%%% TITLE (name) in Hebrew works differently on my template
+\hspace{.25\textwidth}
+\begin{minipage}[t]{1.0\textwidth}
+\par{\centering{\Huge  \textbf{ישראל ישראלי}}\par}
+\end{minipage}
+%
+% GREY LINKS
+\begin{minipage}[t]{1.0\textwidth}
+{\footnotesize\hfill{}\color{gray}
+% \hfill{}להורדת עותק דיגיטלי עדכני לחצו 
+% \href[blue]{https://github.com/kiril-u/kiril-resume-2021-1/tree/main/latest/}{כאן \pdf}
+\hfill{}\hyperref[sec:basicinfoeng]{English in read to here Click} % notice how the sentence is all backwards make sure you keep all english backwards like this all throughout the right-to-left version. "superior" latex cannot into bidirectional documents (at least with the bidi package)
+}
+\end{minipage}
+%
+\section{כללי} % links/general section
+\label{sec:basicinfoheb}
+\unsetRTL
+\setLTR
+\begin{minipage}[t]{.5\linewidth}
+\begin{tabular}{rp{.75\linewidth}}
+\baselineskip=20pt
+% first column
+\email{} :   & \href{mailto:youremail@mail.com}{youremail@mail.com}\\
+\phone{} : &\href{tel:5555555}{555 5555} \\
+\end{tabular}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+\begin{tabular}{rl}
+% \linkedin{} : &\href{LINK GOES HERE}{LINKEDIN-LINK.domain}\\
+\www{} : &\href{https://www.YOURWEBSITE.domain}{https://www.YOURWEBSITE.domain} \\
+\location{} : &\href{YOU-MAY-LINK-YOUR-ADDRESS-HERE}{מחוז עיר,}
+\end{tabular}
+\end{minipage}	
+\unsetLTR
+\unsetRTL
+\setRTL
+%
+\input abstractheb % inserts your self description/abstract
+%
+\section{חלק ראשון} % first section
+
+\entry{2019--2021}
+{\textbf{תואר, שדה, מוסד.}}
+{לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס. אקווזמן גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ.}
+{}
+
+\entry{2015--2018}
+{
+תואר
+\href{link-to-your-diploma.pdf}
+בתחום, מוסד.}
+{לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס.}
+{קווזמן גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ.}
+
+\par{\centering{\large \textbf{כותרת תת}}\par}
+
+\entry{2009--2010}
+{
+קורס, מוסד}
+{לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס. אקווזמן גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ.}
+{}
+{}
+
+\section{חלק שני בסגנון אחר} % thid section
+
+\entry{טבעיות}
+{\textbf{ראשונה, שנייה, שלישית.} פירוט כלשהו.} 
+{}
+{}
+
+\entry{מחשב}
+{שפות כאלו ואחרות.}
+{}
+{}	
+\unsetRTL
