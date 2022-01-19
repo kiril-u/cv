@@ -2,8 +2,6 @@
 
 My actual resume and a template, may be used for either/both LTR and RTL languages.
 
-![Template Preview](https://github.com/kiril-u/kiril-resume-2021/blob/main/ico/template-preview.png?raw=true)
-
 ## Resume Structure
 
 ### [1] main.tex
@@ -59,3 +57,7 @@ TeX files and icons for my own resume.
 - [X] Template file
 
 - [ ] Glossary
+
+## Preview
+
+![Template Preview](https://github.com/kiril-u/kiril-resume-2021/blob/main/ico/template-preview.png?raw=true)
