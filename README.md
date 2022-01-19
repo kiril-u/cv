@@ -1,6 +1,6 @@
-# [(Kiril's Resume 2021 (Written in XeLaTeX))](https://github.com/kiril-u/kiril-resume-2021)
+# [Kiril's Resume 2021](https://github.com/kiril-u/kiril-resume-2021)
 
-My actual resume and a template, may be used for either/both LTR and RTL languages.
+My actual resume and a template written in XeLaTeX. Template files may be used for either/both LTR and RTL languages. Usage is permitted under the guidelines and requirements of GPLv3.
 
 ## Resume Structure
 
