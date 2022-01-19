@@ -1,14 +1,12 @@
-# XeLaTeX Resume 2021
+# [(Kiril's Resume 2021 (Written in XeLaTeX))](https://github.com/kiril-u/kiril-resume-2021)
 
-[(kiril-resume-2021)](https://github.com/kiril-u/kiril-resume-2021)
+My actual resume and a template, may be used for either/both LTR and RTL languages.
 
-My actual resume, written in XeLaTeX, both in English and in Hebrew.
+![Template Preview](https://github.com/kiril-u/kiril-resume-2021/blob/main/ico/template-preview.png?raw=true)
 
-**See folder export-latest for the PDFs**
+## Resume Structure
 
-## main.tex
-
-### Structure
+### [1] main.tex
 
 **Head**
 
@@ -28,7 +26,7 @@ My actual resume, written in XeLaTeX, both in English and in Hebrew.
 - Include English version
 - Include Hebrew version
 
-## kiril-resume-*language*.tex
+### [2] sections-*language*.tex
 
 - Title
 - (Currently) unused option to link a recent online copy of the resume
@@ -36,22 +34,28 @@ My actual resume, written in XeLaTeX, both in English and in Hebrew.
 - Abstract
 - Basic information section
 - Standard resume sections
-- Sub-sections and alternativly formatted sections
+- Sub-sections and alternative formatting
 
-## abstract.tex and abstracthebrew.tex
+### [3] abstracteng.tex and abstractheb.tex
 
 Brief self description.
 
-## export-latest/
+## Other Content
 
-Compiled PDFs.
+### export-latest
+
+Compiled PDFs of my own resume.
 
 ### ico
 
 Graphics for the basic info section.
 
-### To Do
+### my-resume
 
-- Template file
+TeX files and icons for my own resume.
 
-- Glossary
+## To Do
+
+- [X] Template file
+
+- [ ] Glossary
