@@ -1,6 +1,9 @@
 # [Kiril's Resume 2021](https://github.com/kiril-u/kiril-resume-2021)
 
-My actual resume and a template written in XeLaTeX. Template files may be used for either/both LTR and RTL languages. Usage is permitted under the guidelines and requirements of LPPL 1.3c.
+A template based on my previous resume. 
+It has full support for both LTR and RTL languages.
+Usage is permitted under the guidelines and requirements of LPPL 1.3c.
+I've drastically changed my resume since and I plan to archive this repository soon.
 
 ## Resume Structure
 
@@ -38,19 +41,21 @@ My actual resume and a template written in XeLaTeX. Template files may be used f
 
 Brief self description.
 
-## Other Content
+## ico
 
-### export-latest
+Various images, mainly for the contact info section.
 
-Compiled PDFs of my own resume.
 
-### ico
 
-Graphics for the basic info section.
 
-### my-resume
 
-TeX files and icons for my own resume.
+
+
+
+
+
+
+
 
 ## To Do
 
