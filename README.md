@@ -1,4 +1,4 @@
-# [Kiril's Resume 2021](https://github.com/kiril-u/kiril-resume-2021)
+# Bidirectional Simple Resume
 
 A template based on my previous resume. 
 It has full support for both LTR and RTL languages.
@@ -41,7 +41,7 @@ I've drastically changed my resume since and I plan to archive this repository s
 
 Brief self description.
 
-## ico
+### [4] ico
 
 Various images, mainly for the contact info section.
 
