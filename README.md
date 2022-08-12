@@ -1,7 +1,7 @@
-# Bidirectional Simple Resume
+# Simple, Bidirectional, XeLaTeX Resume - One
 
 A template based on my previous resume. 
-It has full support for both LTR and RTL languages.
+It has full support for both LTR and RTL.
 Usage is permitted under the guidelines and requirements of LPPL 1.3c.
 I've drastically changed my resume since and I plan to archive this repository soon.
 
@@ -43,25 +43,8 @@ Brief self description.
 
 ### [4] ico
 
-Various images, mainly for the contact info section.
+Various image files, mainly for the contact info section.
 
-
-
-
-
-
-
-
-
-
-
-
-
-## To Do
-
-- [X] Template file
-
-- [ ] Glossary
 
 ## Preview
 
